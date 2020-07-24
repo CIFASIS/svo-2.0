@@ -25,7 +25,7 @@ you can either start an issue or contact Zichao Zhang (zzhang AT ifi DOT uzh DOT
 # Running [SVO 2.0](http://rpg.ifi.uzh.ch/svo2.html) in a docker container
 
 ## Description
-This repository allows to run [SVO 2.0](https://github.com/uzh-rpg/rpg_svo_example/) in a docker container. While SVO runs in a container, input images are supplied running `rosbag play` on the host. 
+This repository allows to run [SVO 2.0](https://github.com/uzh-rpg/rpg_svo_example/) in a docker container. While SVO runs in a container, input images are supplied running `rosbag play` on the host. **Please note that source code of certain libraries is not available. We download these libraries from a link provided by the authors.**
 
 ## Dependencies
 * Docker
