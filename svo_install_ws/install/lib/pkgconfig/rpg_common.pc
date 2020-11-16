@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: rpg_common
+Description: Description of rpg_common
+Version: 0.0.0
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lrpg_common
+Requires: cv_bridge eigen_catkin eigen_checks gflags_catkin glog_catkin minkindr

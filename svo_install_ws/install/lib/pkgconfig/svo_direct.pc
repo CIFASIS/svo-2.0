@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: svo_direct
+Description: Description of svo_direct
+Version: 0.0.1
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lsvo_direct
+Requires: cv_bridge eigen_catkin gflags_catkin glog_catkin roslib svo_common svo_test_utils vikit_ros vikit_solver

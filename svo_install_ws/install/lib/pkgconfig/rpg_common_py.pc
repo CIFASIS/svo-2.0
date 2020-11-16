@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: rpg_common_py
+Description: Description of rpg_common_py
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/zichao/svo_install_ws/install/lib 
+Requires: 

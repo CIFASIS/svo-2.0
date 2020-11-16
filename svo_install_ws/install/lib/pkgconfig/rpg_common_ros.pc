@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: rpg_common_ros
+Description: Description of rpg_common_ros
+Version: 0.0.0
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lrpg_common_ros
+Requires: cv_bridge eigen_catkin glog_catkin minkindr minkindr_conversions pcl_ros rosbag roscpp rpg_common tf sensor_msgs image_transport

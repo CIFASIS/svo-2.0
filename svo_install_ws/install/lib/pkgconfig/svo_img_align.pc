@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: svo_img_align
+Description: Description of svo_img_align
+Version: 0.0.1
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lsvo_img_align
+Requires: svo_cmake svo_common svo_direct glog_catkin eigen_catkin vikit_solver vikit_ros eigen_checks

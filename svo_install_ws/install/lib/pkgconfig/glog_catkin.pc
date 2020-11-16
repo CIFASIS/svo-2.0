@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: glog_catkin
+Description: Description of glog_catkin
+Version: 0.1.2
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lglog_catkin
+Requires: gflags_catkin

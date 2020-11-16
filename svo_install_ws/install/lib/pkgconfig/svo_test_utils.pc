@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: svo_test_utils
+Description: Description of svo_test_utils
+Version: 0.0.1
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lsvo_test_utils
+Requires: cv_bridge eigen_catkin glog_catkin roslib svo_common vikit_ros vikit_common vikit_cameras

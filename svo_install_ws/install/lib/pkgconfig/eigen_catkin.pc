@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: eigen_catkin
+Description: Description of eigen_catkin
+Version: 0.0.301
+Cflags: -I/usr/include/eigen3
+Libs: -L/home/zichao/svo_install_ws/install/lib -leigen_catkin
+Requires: 

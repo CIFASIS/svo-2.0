@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: vikit_ros
+Description: Description of vikit_ros
+Version: 0.0.0
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lvikit_ros
+Requires: svo_cmake vikit_common glog_catkin eigen_catkin minkindr roscpp tf visualization_msgs cv_bridge sensor_msgs

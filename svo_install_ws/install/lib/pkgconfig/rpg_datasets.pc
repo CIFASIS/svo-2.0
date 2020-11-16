@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: rpg_datasets
+Description: Description of rpg_datasets
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/zichao/svo_install_ws/install/lib 
+Requires: 

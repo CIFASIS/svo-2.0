@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package>
+  <name>rpg_datasets</name>
+  <version>0.0.1</version> 
+  <description>RPG dataset configurations, launch files and cameras</description>
+  <maintainer email="code@werlberger.org">Manuel Werlberger</maintainer>
+  <author>RPG</author>
+  <license>New BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+</package>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rpg_common_py</name>
+  <version>0.0.0</version>
+  <description>
+    Common python code for RPG.
+  </description>
+
+  <author>Titus Cieslewski</author>
+  <maintainer email="titus@ifi.uzh.ch">Titus Cieslewski</maintainer>
+  <license>Private</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  
+</package>

@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: svo_cmake
+Description: Description of svo_cmake
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/zichao/svo_install_ws/install/lib 
+Requires: 

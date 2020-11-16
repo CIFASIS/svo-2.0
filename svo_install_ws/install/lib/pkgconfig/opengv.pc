@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: opengv
+Description: Description of opengv
+Version: 1.0.0
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lopengv -lrandom_generators
+Requires: 

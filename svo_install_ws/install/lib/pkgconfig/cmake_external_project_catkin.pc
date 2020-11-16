@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: cmake_external_project_catkin
+Description: Description of cmake_external_project_catkin
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/zichao/svo_install_ws/install/lib 
+Requires: 

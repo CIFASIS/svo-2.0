@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: svo
+Description: Description of svo
+Version: 0.1.0
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lsvo
+Requires: cmake_modules svo_cmake svo_common svo_direct svo_tracker svo_test_utils svo_img_align roscpp roslib rpg_common vikit_common vikit_cameras vikit_solver vikit_ros eigen_catkin minkindr fast opengv cv_bridge glog_catkin

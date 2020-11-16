@@ -1,0 +1,8 @@
+prefix=/home/zichao/svo_install_ws/install
+
+Name: svo_tracker
+Description: Description of svo_tracker
+Version: 0.0.1
+Cflags: -I/home/zichao/svo_install_ws/install/include
+Libs: -L/home/zichao/svo_install_ws/install/lib -lsvo_tracker
+Requires: roslib glog_catkin cv_bridge eigen_catkin svo_common svo_direct svo_test_utils
