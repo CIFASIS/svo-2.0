@@ -67,6 +67,17 @@ SvoInterface::SvoInterface(
   if(vk::param<bool>(pnh_, "use_imu", false))
     imu_handler_ = factory::getImuHandler(pnh_);
 
+#ifdef SAVE_TIMES
+  num_tracked_frames_start_ = 0;
+  num_tracked_frames_end_ = 0;
+  f_track_start_times_.open("tracking_times_start.txt");
+  f_track_start_times_ << std::fixed;
+  f_track_start_times_ << std::setprecision(6);
+  f_track_end_times_.open("tracking_times_end.txt");
+  f_track_end_times_ << std::fixed;
+  f_track_end_times_ << std::setprecision(6);
+#endif
+
 #ifdef SVO_USE_BACKEND
   if(vk::param<bool>(pnh_, "use_backend", false))
   {
@@ -86,6 +97,12 @@ SvoInterface::~SvoInterface()
     imu_thread_->join();
   if (image_thread_)
     image_thread_->join();
+
+#ifdef SAVE_TIMES
+  f_track_start_times_.close();
+  f_track_end_times_.close();
+#endif
+
   VLOG(1) << "Destructed SVO.";
 }
 
@@ -225,6 +242,12 @@ void SvoInterface::stereoCallback(
   if(idle_)
     return;
 
+#ifdef SAVE_TIMES
+  num_tracked_frames_start_++;
+  auto const t_start = std::chrono::system_clock::now().time_since_epoch().count();
+  f_track_start_times_ << num_tracked_frames_start_ << " " << t_start / 1e09 << std::endl;
+#endif
+
   cv::Mat img0, img1;
   try {
     img0 = cv_bridge::toCvShare(msg0, "mono8")->image;
@@ -238,6 +261,13 @@ void SvoInterface::stereoCallback(
   imageCallbackPreprocessing(msg0->header.stamp.toNSec());
 
   processImageBundle({img0, img1}, msg0->header.stamp.toNSec());
+
+#ifdef SAVE_TIMES
+  num_tracked_frames_end_++;
+  auto const t_end = std::chrono::system_clock::now().time_since_epoch().count();
+  f_track_end_times_ << num_tracked_frames_end_ << " " << t_end / 1e09 << std::endl;
+#endif
+
   publishResults({img0, img1}, msg0->header.stamp.toNSec());
 
   if(svo_->stage() == Stage::kPaused && automatic_reinitialization_)

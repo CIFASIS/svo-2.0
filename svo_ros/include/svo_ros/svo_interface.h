@@ -12,6 +12,10 @@
 #include <svo/common/camera_fwd.h>
 #include <svo/common/transformation.h>
 
+#ifdef SAVE_TIMES
+#include <fstream>
+#endif
+
 namespace svo {
 
 // forward declarations
@@ -96,6 +100,14 @@ public:
   void imuLoop();
   void monoLoop();
   void stereoLoop();
+
+#ifdef SAVE_TIMES
+  int num_tracked_frames_start_;
+  int num_tracked_frames_end_;
+  std::ofstream f_track_start_times_;
+  std::ofstream f_track_end_times_;
+#endif
+
 };
 
 } // namespace svo

@@ -4,6 +4,12 @@ cmake_minimum_required(VERSION 2.8.3)
 find_package(catkin_simple REQUIRED)
 catkin_simple()
 
+option(SAVE_TIMES "Enable option to save tracking times" OFF)
+if(SAVE_TIMES)
+  message(STATUS "Building with SAVE_TIMES")
+  add_definitions(-DSAVE_TIMES)
+endif()
+
 #############################################################################
 # Set build flags, set ARM_ARCHITECTURE environment variable on Odroid
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -Wall -Werror -D_LINUX -D_REENTRANT -march=native -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unknown-pragmas")
